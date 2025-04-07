@@ -1,0 +1,19 @@
+# Biến môi trường
+.env
+backend/.env
+frontend/.env
+
+# Thư mục dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# File build của frontend
+frontend/build/
+
+# File log
+*.log
+
+# File tạm thời
+.vscode/
+*.swp
