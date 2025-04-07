@@ -17,3 +17,6 @@ frontend/build/
 # File tạm thời
 .vscode/
 *.swp
+
+
+note/note.md
