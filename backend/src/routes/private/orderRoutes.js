@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../../middleware/auth');
 const orderController = require('../../controllers/orderController');
 
-router.post('/', auth, orderController.createOrder);
-router.get('/', auth, orderController.getUserOrders);
+// Tạo đơn hàng mới
+router.post('/', orderController.createOrder);
+
+// Lấy danh sách đơn hàng của user
+router.get('/user/:userId', orderController.getUserOrders);
 
 module.exports = router;
