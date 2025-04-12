@@ -1,0 +1,692 @@
+/* frontend/public/css/client.css */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f7f7;
+    padding-top: 5.5rem;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: #28a745;
+    /* Màu xanh lá giống giao diện mẫu */
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+    background: #218838;
+    /* Màu xanh đậm hơn khi hover */
+}
+
+/* Headings */
+.heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color: #111;
+}
+
+.heading span {
+    color: #28a745;
+    /* Màu xanh lá */
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .header-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #111;
+}
+
+.header .header-1 .logo i {
+    color: #28a745;
+    /* Màu xanh lá */
+}
+
+.header .header-1 .search-form {
+    width: 50rem;
+    height: 5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: #111;
+}
+
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: #111;
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover {
+    color: #28a745;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #111;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover {
+    color: #28a745;
+}
+
+#search-btn {
+    display: none;
+}
+
+.header .header-2 {
+    background: #28a745;
+    /* Màu xanh lá */
+}
+
+.header .header-2 .navbar {
+    text-align: center;
+}
+
+.header .header-2 .navbar a {
+    color: #fff;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover {
+    background: #218838;
+    /* Màu xanh đậm hơn khi hover */
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Login Form */
+.login-form-container {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+.login-form-container form {
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 40rem;
+    text-align: center;
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.login-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    color: #111;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: #111;
+    text-transform: none;
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label {
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.login-form-container form .btn {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.login-form-container form p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.5rem 0;
+}
+
+.login-form-container form p a {
+    color: #28a745;
+}
+
+.login-form-container form p a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 45rem;
+}
+
+.home .row .books-slider {
+    flex: 1 1 45rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider a img {
+    height: 25rem;
+    padding: 2rem;
+}
+
+.home .row .books-slider a:hover img {
+    transform: scale(0.9);
+}
+
+.home .row .books-slider .stand {
+    width: 100%;
+    margin-top: -2rem;
+}
+
+.home .row .content h3 {
+    font-size: 4.5rem;
+    color: #111;
+}
+
+.home .row .content p {
+    font-size: 1.7rem;
+    color: #666;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/* Icons Container */
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #fff;
+}
+
+.icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.icons-container .icons i {
+    font-size: 3.5rem;
+    color: #28a745;
+    /* Màu xanh lá */
+}
+
+.icons-container .icons .content h3 {
+    font-size: 2.2rem;
+    color: #111;
+    padding-bottom: 0.5rem;
+}
+
+.icons-container .icons .content p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Featured Section */
+.featured .featured-slider .box {
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.featured .featured-slider .box:hover .image {
+    transform: translateY(6rem);
+}
+
+.featured .featured-slider .box:hover .icons {
+    transform: translateY(0);
+}
+
+.featured .featured-slider .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    transform: translateY(-100%);
+}
+
+.featured .featured-slider .box .icons a {
+    color: #fff;
+    font-size: 2.2rem;
+    padding: 1.3rem 1.5rem;
+}
+
+.featured .featured-slider .box .icons a:hover {
+    background: #28a745;
+    color: #fff;
+}
+
+.featured .featured-slider .box .image {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.featured .featured-slider .box .content {
+    background: #fff;
+    padding: 1.5rem;
+}
+
+.featured .featured-slider .box .content h3 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.featured .featured-slider .box .content .price {
+    font-size: 2.2rem;
+    color: #111;
+    padding-top: 1rem;
+}
+
+.featured .featured-slider .box .content .price span {
+    font-size: 1.5rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: url(/image/letter-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.newsletter form {
+    max-width: 55rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.newsletter h3 {
+    font-size: 3rem;
+    color: #111;
+    padding-bottom: 1rem;
+}
+
+.newsletter form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: #111;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    text-transform: none;
+}
+
+/* Reviews Section */
+.reviews .reviews-slider .box {
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    margin: 2rem 0;
+}
+
+.reviews .reviews-slider .box img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+.reviews .reviews-slider .box h3 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.reviews .reviews-slider .box p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.reviews .reviews-slider .box .stars i {
+    font-size: 1.7rem;
+    color: #28a745;
+    /* Màu xanh lá cho sao */
+}
+
+/* Blogs Section */
+.blogs .blogs-slider .box {
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+.blogs .blogs-slider .box .image {
+    height: 20rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.blogs .blogs-slider .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .blogs-slider .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.blogs .blogs-slider .box .content {
+    padding: 1.5rem;
+}
+
+.blogs .blogs-slider .box .content h3 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.blogs .blogs-slider .box .content p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/* Footer */
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #111;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: 0.5rem;
+    color: #28a745;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box .map {
+    width: 100%;
+}
+
+.footer .share {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #111;
+    margin: 0 0.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background: #28a745;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #666;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .credit span {
+    color: #28a745;
+}
+
+/* Loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img {
+    width: 35rem;
+}
+
+.loader-container.fade-out {
+    top: -120%;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header .header-1 {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 0;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .header .header-1 {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .header .header-1 .search-form {
+        position: absolute;
+        top: -115%;
+        right: 2rem;
+        width: 90%;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .header .header-1 .search-form.active {
+        top: 115%;
+    }
+
+    .header .header-2 {
+        display: none;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    .home .row .content {
+        text-align: center;
+    }
+
+    .home .row .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .newsletter {
+        background: linear-gradient(135deg, #f7f7f7 20%, #fff 80%);
+    }
+
+    .newsletter form {
+        display: block;
+        max-width: 100%;
+    }
+
+    .newsletter form .box {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .header-1 .search-form {
+        width: 90%;
+    }
+}
